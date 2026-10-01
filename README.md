@@ -96,27 +96,24 @@ docker compose exec postgres psql -U fraud -d fraud -c "SELECT count(*), sum(fra
 ```
 .
 ├── fraud_detector/
-│   ├── artifacts/          # model.cbm, meta.json
+│   ├── artifacts/          
 │   ├── scripts/
-│   │   ├── preprocess.py   # этап 1: препроцессинг
-│   │   └── scorer.py       # этап 2: скоринг
+│   │   ├── preprocess.py   
+│   │   └── scorer.py       
 │   ├── src/
-│   │   ├── features.py     # общий расчёт признаков
-│   │   └── config.py       # настройки и логирование
+│   │   ├── features.py     
+│   │   └── config.py       
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── score_writer/
-│   ├── writer.py           # читает scoring, пишет в Postgres (таблица scores)
+│   ├── writer.py          
 │   ├── Dockerfile
 │   └── requirements.txt
 ├── interface/
-│   ├── app.py              # Streamlit UI
+│   ├── app.py             
 │   ├── Dockerfile
 │   └── requirements.txt
-├── train/
-│   ├── train.py            # офлайн-обучение модели (в Docker-образы не входит)
-│   └── requirements.txt
-├── data for ML/            # train.csv, test.csv
 ├── docker-compose.yaml
 └── README.md
+└── test.csv
 ```
