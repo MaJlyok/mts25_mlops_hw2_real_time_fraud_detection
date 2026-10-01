@@ -1,0 +1,26 @@
+{
+  "feature_columns": [
+    "amount_log",
+    "distance_km",
+    "hour",
+    "day_of_week",
+    "cat_id",
+    "merch",
+    "us_state",
+    "gender",
+    "population_city_log"
+  ],
+  "categorical_columns": [
+    "cat_id",
+    "merch",
+    "us_state",
+    "gender"
+  ],
+  "impute_values": {
+    "amount_log": 3.8790865051818813,
+    "distance_km": 78.22232122598041,
+    "population_city_log": 7.806696372521179
+  },
+  "threshold": 0.8291688443285751,
+  "catboost_version": "1.2.8"
+}
